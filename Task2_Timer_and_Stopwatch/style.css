@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:wght@300&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #121212;
+    color: #cccc;
+}
+
+.ul{
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+}
+
+.select{
+    display: inline-block;
+    position: relative;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: 0.4s;
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+}
+
+.select::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ededed;
+    border-radius: 4px;
+    scale: 0 1;
+    transform-origin: middle;
+    transition: scale 0.25s;
+}
+
+.select:hover::before{
+    scale: 1;
+}
+
+.select:hover{
+    color: #ededed;
+}
+
+.active{
+    border-bottom: 2px solid #ededed;
+}   
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.timer .time-input{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.timer .time-input label{
+    font-size: 5rem;
+}
+
+.timer .time-input input{
+    width: 21rem;
+    font-size: 5rem;
+    text-align: center;
+    background: transparent;
+    outline: none; 
+    color: #ededed;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.timer .time-input input:hover{
+    transform: translateY(-3px) rotateX(10deg);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.timer .time-input input:focus{
+    transform: translateY(-3px) rotateX(10deg);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.timer .time-input span{
+    font-size: 5rem;
+}
+
+.timer-display{
+    padding: 2rem;
+}
+
+.timer-display .time-left{
+    font-size: 18rem;
+}
+
+.timer-controls{
+    display: flex;
+    gap: 3rem;
+}
+
+#timer-start,
+#timer-pause,
+#timer-restart{
+    border: 2px solid #ededed;
+    border-radius: 50%;
+    background: #ededed;
+    color: #121212;
+    padding: 2rem;
+    cursor: pointer;
+}
+
+#timer-pause,
+#timer-restart{
+    display: none;
+}
+
+.stopwatch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    align-items: center;
+    gap: 10rem;
+    display: none;
+}
+
+.main_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.circle{
+    border: 0.6rem solid #ededed;
+    border-radius: 50%;
+    width: 25rem;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle .stopwatch-display .time{
+    font-size: 5.3rem;
+}
+
+.stopwatch-controls{
+    display: flex;
+    gap: 2rem;
+}
+
+#stopwatch-restart,
+#stopwatch-start,
+#stopwatch-laps,
+#stopwatch-pause{
+    background: #ededed;
+    border: 2px solid #ededed;
+    border-radius: 50%;
+    padding: 1rem;
+    color: #121212;
+    cursor: pointer;
+}
+
+#stopwatch-pause{
+    display: none;
+}
+
+.laps{
+    font-size: 2rem;
+    display: none;
+    color: #ededed;
+}
+
+
+
+
+
+
+

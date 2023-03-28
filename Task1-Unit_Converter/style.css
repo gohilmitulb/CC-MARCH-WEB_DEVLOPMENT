@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Poppins&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: lavender;
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.3rem;
+	border-bottom: 2px solid gray;
+}
+
+.heading h1 {
+	background-image: linear-gradient(to right, red, blue, green, purple);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	font-size: 3rem;
+	text-align: center;
+	letter-spacing: 1.5rem;
+	padding: 0.6rem;
+	display: inline-block;
+}
+
+
+.heading img {
+	height: 4rem;
+	width: 4rem;
+}
+
+.maincontent {
+	display: flex;
+	flex-direction: column;
+	min-height: 88vh;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.unitlist {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	gap: 2rem;
+}
+
+.list_section {
+	display: flex;
+	gap: 5rem;
+	padding: 1rem;
+}
+
+.unitmenu {
+	border: 2px solid gray;
+	border-radius: 0.5rem;
+	transition: 1s;
+}
+
+.unitmenu:hover {
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.unit {
+	font-size: 2.3rem;
+	cursor: pointer;
+	transition: 1s;
+}
+
+.unit.active {
+	border-bottom: 2px solid gray;
+	color: #ff6262;
+	letter-spacing: 0.3rem;
+	text-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.unit:hover {
+	border-bottom: 2px solid gray;
+	color: #ff6262;
+	letter-spacing: 0.3rem;
+}
+
+.moreunit {
+	display: flex;
+	justify-content: center;
+	padding-right: 1rem;
+	flex-direction: column;
+	cursor: pointer;
+	font-size: 3rem;
+}
+
+.moreunit i:hover {
+	color: gray;
+}
+
+.hamburger {
+	display: none;
+}
+
+.show_hamburger {
+	display: block;
+}
+
+.subunitlist {
+	position: absolute;
+	list-style: none;
+	border: 2px solid gray;
+}
+
+.subunit {
+	position: relative;
+	padding: 1rem;
+	width: 100%;
+	text-align: center;
+	background-color: #D8BFD8;
+	font-size: 2.2rem;
+}
+
+.subunit.active {
+	background-color: lavenderblush;
+	letter-spacing: 0.3rem;
+}
+
+.subunit:hover {
+	background-color: lavenderblush;
+	letter-spacing: 0.3rem;
+}
+
+#hamburger-icon.active {
+	color: #ff6262;
+}
+
+.length,
+.weight,
+.temperature,
+.time,
+.area,
+.currency,
+.energy,
+.power,
+.pressure,
+.volume,
+.speed {
+	display: inline-flex;
+	padding: 3rem;
+	gap: 5rem;
+	border: 2px solid gray;
+	border-radius: 0.5rem;
+}
+
+#showweight,
+#showtemperature,
+#showtime,
+#showarea,
+#showcurrency,
+#showenergy,
+#showpower,
+#showpressure,
+#showvolume,
+#showspeed {
+	display: none;
+}
+
+.lengthfrom,
+.lengthto,
+.weightfrom,
+.weightto,
+.temperaturefrom,
+.temperatureto,
+.timefrom,
+.timeto,
+.areafrom,
+.areato,
+.currencyfrom,
+.currencyto,
+.energyfrom,
+.energyto,
+.powerfrom,
+.powerto,
+.pressurefrom,
+.pressureto,
+.speedfrom,
+.speedto {
+	display: flex;
+	flex-direction: column;
+}
+
+.lengthfrom label,
+.lengthto label,
+.weightfrom label,
+.weightto label,
+.temperaturefrom label,
+.temperatureto label,
+.timefrom label,
+.timeto label,
+.areafrom label,
+.areato label,
+.currencyfrom label,
+.currencyto label,
+.energyfrom label,
+.energyto label,
+.powerfrom label,
+.powerto label,
+.pressurefrom label,
+.pressureto label,
+.speedfrom label,
+.speedto label {
+	font-size: 2.4rem;
+	color: #252525;
+	letter-spacing: 0.5rem;
+}
+
+select {
+	background: transparent;
+	padding: 1rem;
+	width: 32rem;
+}
+
+option {
+	font-size: 1.8rem;
+	font-family: 'Rubik', sans-serif;
+	letter-spacing: 0.3rem;
+	padding: 0.1rem;
+	cursor: pointer;
+	text-align: center;
+}
+
+option:hover {
+	background-color: #D8BFD8;
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+	text-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+option:checked {
+	background-color: #D8BFD8;
+}
+
+input {
+	font-size: 2rem;
+	letter-spacing: 0.2rem;
+	border: 2px solid gray;
+	border-radius: 0.5rem;
+	font-family: 'Tilt Neon', cursive;
+	background-color: lavender;
+}
+
+input::placeholder {
+	background-image: linear-gradient(to right, red, blue, green, purple);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+input:focus {
+	border-color: #D8BFD8;
+	background-color: lavenderblush;
+}

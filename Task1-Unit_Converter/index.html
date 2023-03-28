@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit">
+	<title>Unit Converter - MG</title>
+	<link rel="icon" type="image/png" href="logo.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+		integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="heading">
+			<img src="logo.png" alt="logo">
+			<h1>Unit Converter</h1>
+		</div>
+		<div class="maincontent">
+			<div class="unitmenu">
+				<ul class="unitlist">
+					<div class="list_section">
+						<li class="unit active" id="menu-length">Length</li>
+						<li class="unit" id="menu-weight">Mass/Weight</li>
+						<li class="unit" id="menu-temperature">Temperature</li>
+						<li class="unit" id="menu-time">Time</li>
+						<li class="unit" id="menu-area">Area</li>
+					</div>
+					<li class="moreunit" onclick="showham()"><i id="hamburger-icon" class="fa-solid fa-bars"></i>
+						<div class="hamburger">
+							<ul class="subunitlist">
+								<li class="subunit" id="menu-energy">Energy</li>
+								<li class="subunit" id="menu-power">Power</li>
+								<li class="subunit" id="menu-pressure">Pressure</li>
+								<li class="subunit" id="menu-speed">Speed</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="unitsform">
+				<form class="form">
+
+					<div class="length" id="showlength">
+						<div class="lengthfrom">
+							<label for="unitfrom">From:</label><br>
+							<input type="number" placeholder="Enter value" required=""><br>
+							<select name="fromval" size="11" id="" onchange="convertLength()">
+								<option value="1" selected>Meter</option>
+								<option value="2">Centimeter</option>
+								<option value="3">Kilometer</option>
+								<option value="4">Millimeter</option>
+								<option value="5">Micrometer</option>
+								<option value="6">Nanometer</option>
+								<option value="7">Mile</option>
+								<option value="8">Yard</option>
+								<option value="9">Foot</option>
+								<option value="10">Inch</option>
+								<option value="11">Light Year</option>
+							</select>
+						</div>
+						<hr color="gray">
+						<div class="lengthto">
+							<label for="unitto">To:</label><br>
+							<input type="number" placeholder="Converted value" readonly required=""><br>
+							<select name="toval" size="11" id="" onchange="convertLength()">
+								<option value="1">Meter</option>
+								<option value="2">Centimeter</option>
+								<option value="3" selected>Kilometer</option>
+								<option value="4">Millimeter</option>
+								<option value="5">Micrometer</option>
+								<option value="6">Nanometer</option>
+								<option value="7">Mile</option>
+								<option value="8">Yard</option>
+								<option value="9">Foot</option>
+								<option value="10">Inch</option>
+								<option value="11">Light Year</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="weight" id="showweight">
+						<div class="weightfrom">
+							<label for="unitfrom">From:</label><br>
+							<input type="number" placeholder="Enter value" required=""><br>
+							<select name="fromval" size="10" id="" onchange="convertWeight()">
+								<option value="1" selected>Kilogram</option>
+								<option value="2">Gram</option>
+								<option value="3">Milligram</option>
+								<option value="4">Metric Ton</option>
+								<option value="5">Long Ton</option>
+								<option value="6">Short Ton</option>
+								<option value="7">Pound</option>
+								<option value="8">Ounce</option>
+								<option value="9">Carrat</option>
+								<option value="10">Atomic Mass Unit</option>
+							</select>
+						</div>
+						<hr color="gray">
+						<div class="weightto">
+							<label for="unitto">To:</label><br>
+							<input type="number" placeholder="Converted value" readonly required=""><br>
+							<select name="toval" size="10" id="" onchange="convertWeight()">
+								<option value="1">Kilogram</option>
+								<option value="2" selected>Gram</option>
+								<option value="3">Milligram</option>
+								<option value="4">Metric Ton</option>
+								<option value="5">Long Ton</option>
+								<option value="6">Short Ton</option>
+								<option value="7">Pound</option>
+								<option value="8">Ounce</option>
+								<option value="9">Carrat</option>
+								<option value="10">Atomic Mass Unit</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="temperature" id="showtemperature">
+						<div class="temperaturefrom">
+							<label for="unitfrom">From:</label><br>
+							<input type="number" placeholder="Enter value" required=""><br>
+							<select name="fromval" size="3" id="" onchange="converTemperature()">
+								<option value="1" selected>Celsius</option>
+								<option value="2">Kelvin</option>
+								<option value="3">Fahrenheit</option>
+							</select>
+						</div>
+						<hr color="gray">
+						<div class="temperatureto">
+							<label for="unitto">To:</label><br>
+							<input type="number" placeholder="Converted value" readonly required=""><br>
+							<select name="toval" size="3" id="" onchange="convertTemperature()">
+								<option value="1">Celsius</option>
+								<option value="2" selected>Kelvin</option>
+								<option value="3">Fahrenheit</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="time" id="showtime">
+						<div class="timefrom">
+							<label for="unitfrom">From:</label><br>
+							<input type="number" placeholder="Enter value" required=""><br>
+							<select name="fromval" size="11" id="" onchange="convertTime()">
+								<option value="1" selected>Second</option>
+								<option value="2">Millisecond</option>
+								<option value="3">Microsecond</option>
+								<option value="4">Nanosecond</option>
+								<option value="5">Picosecond</option>
+								<option value="6">Minute</option>
+								<option value="7">Hour</option>
+								<option value="8">Day</option>
+								<option value="9">Week</option>
+								<option value="10">Month</option>
+								<option value="11">Year</option>
+							</select>
+						</div>
+						<hr color="gray">
+						<div class="timeto">
+							<label for="unitto">To:</label><br>
+							<input type="number" placeholder="Converted value" readonly required=""><br>
+							<select name="toval" size="11" id="" onchange="convertTime()">
+								<option value="1">Second</option>
+								<option value="2">Millisecond</option>
+								<option value="3">Microsecond</option>
+								<option value="4">Nanosecond</option>
+								<option value="5">Picosecond</option>
+								<option value="6" selected>Minute</option>
+								<option value="7">Hour</option>
+								<option value="8">Day</option>
+								<option value="9">Week</option>
+								<option value="10">Month</option>
+								<option value="11">Year</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="area" id="showarea">
+						<div class="areafrom">
+							<label for="unitfrom">From:</label><br>
+							<input type="number" placeholder="Enter value" required=""><br>
+							<select name="fromval" size="11" id="" onchange="convertArea()">
+								<option value="1" selected>Square Meter</option>
+								<option value="2">Square Kilometer</option>
+								<option value="3">Square Centimeter</option>
+								<option value="4">Square Millimeter</option>
+								<option value="5">Square Micrometer</option>
+								<option value="6">Hectare</option>
+								<option value="7">Square Mile</option>
+								<option value="8">Square Yard</option>
+								<option value="9">Square Foot</option>
+								<option value="10">Square Inch</option>
+								<option value="11">Acre</option>
+							</select>
+						</div>
+						<hr color="gray">
+						<div class="areato">
+							<label for="unitto">To:</label><br>
+							<input type="number" placeholder="Converted value" readonly required=""><br>
+							<select name="toval" size="11" id="" onchange="convertArea()">
+								<option value="1">Square Meter</option>
+								<option value="2" selected>Square Kilometer</option>
+								<option value="3">Square Centimeter</option>
+								<option value="4">Square Millimeter</option>
+								<option value="5">Square Micrometer</option>
+								<option value="6">Hectare</option>
+								<option value="7">Square Mile</option>
+								<option value="8">Square Yard</option>
+								<option value="9">Square Foot</option>
+								<option value="10">Square Inch</option>
+								<option value="11">Acre</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="energy" id="showenergy">
+						<div class="energyfrom">
+							<label for="unitfrom">From:</label><br>
+							<input type="number" placeholder="Enter value" required=""><br>
+							<select name="fromval" size="10" id="" onchange="convertEnergy()">
+								<option value="1" selected>Joule [J]</option>
+								<option value="2">Kilojoule [kJ]</option>
+								<option value="3">Kilowatt-hour [kWh]</option>
+								<option value="4">Watt-hour [Wh]</option>
+								<option value="5">Calorie [cal]</option>
+								<option value="6">Kilocalorie [Kcal]</option>
+								<option value="7">Btu [British thermal unit]</option>
+								<option value="8">Megajoule [MJ]</option>
+								<option value="9">Gigajoule [GJ]</option>
+								<option value="10">Electron-volt [eV]</option>
+							</select>
+						</div>
+						<hr color="gray">
+						<div class="energyto">
+							<label for="unitto">To:</label><br>
+							<input type="number" placeholder="Converted value" readonly required=""><br>
+							<select name="toval" size="10" id="" onchange="convertEnergy()">
+								<option value="1">Joule [J]</option>
+								<option value="2" selected>Kilojoule [kJ]</option>
+								<option value="3">Kilowatt-hour [kWh]</option>
+								<option value="4">Watt-hour [Wh]</option>
+								<option value="5">Calorie [cal]</option>
+								<option value="6">Kilocalorie [Kcal]</option>
+								<option value="7">Btu [British thermal unit]</option>
+								<option value="8">Megajoule [MJ]</option>
+								<option value="9">Gigajoule [GJ]</option>
+								<option value="10">Electron-volt [eV]</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="power" id="showpower">
+						<div class="powerfrom">
+							<label for="unitfrom">From:</label><br>
+							<input type="number" placeholder="Enter value" required=""><br>
+							<select name="fromval" size="11" id="" onchange="convertPower()">
+								<option value="1" selected>Watt [W]</option>
+								<option value="2">Kilowatt [kW]</option>
+								<option value="3">Megawatt [MW]</option>
+								<option value="4">Gigawatt [GW]</option>
+								<option value="5">Exawatt [EW]</option>
+								<option value="6">Petawatt [PW]</option>
+								<option value="7">Terawatt [TW]</option>
+								<option value="8">BTU/hour [British Thermal Units per hour]</option>
+								<option value="9">MBtu [IT]/hour</option>
+								<option value="10">Calorie per second [cal/s]</option>
+								<option value="11">Kilocalorie [IT]/hour</option>
+								<option value="12">Joule/second</option>
+								<option value="13">Horsepower [hp]</option>
+								<option value="14">Foot-pounds per second [ft-lbf/s]</option>
+							</select>
+						</div>
+						<hr color="gray">
+						<div class="powerto">
+							<label for="unitto">To:</label><br>
+							<input type="number" placeholder="Converted value" readonly required=""><br>
+							<select name="toval" size="11" id="" onchange="convertPower()">
+								<option value="1">Watt [W]</option>
+								<option value="2" selected>Kilowatt [kW]</option>
+								<option value="3">Megawatt [MW]</option>
+								<option value="4">Gigawatt [GW]</option>
+								<option value="5">Exawatt [EW]</option>
+								<option value="6">Petawatt [PW]</option>
+								<option value="7">Terawatt [TW]</option>
+								<option value="8">BTU/hour [British Thermal Units per hour]</option>
+								<option value="9">MBtu [IT]/hour</option>
+								<option value="10">Calorie per second [cal/s]</option>
+								<option value="11">Kilocalorie [IT]/hour</option>
+								<option value="12">BTU [th]/hour</option>
+								<option value="13">Joule/second</option>
+								<option value="14">Horsepower [hp]</option>
+								<option value="15">Foot-pounds per second [ft-lbf/s]</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="pressure" id="showpressure">
+						<div class="pressurefrom">
+							<label for="unitfrom">From:</label><br>
+							<input type="number" placeholder="Enter value" required=""><br>
+							<select name="fromval" size="11" id="" onchange="convertPressure()">
+								<option value="1" selected>Pascal [Pa]</option>
+								<option value="2">Kilopascal [kPa]</option>
+								<option value="3">Bar</option>
+								<option value="4">PSI [psi]</option>
+								<option value="5">KSI [ksi]</option>
+								<option value="6">Standard atmosphere [atm]</option>
+								<option value="7">Newton/square meter</option>
+								<option value="8">Pound-force/square inch [psi]</option>
+								<option value="9">Torr</option>
+								<option value="10">Millimeter of mercury [mmHg]</option>
+								<option value="11">Inches of mercury [inHg]</option>
+								<option value="12">Barad</option>
+							</select>
+						</div>
+						<hr color="gray">
+						<div class="pressureto">
+							<label for="unitto">To:</label><br>
+							<input type="number" placeholder="Converted value" readonly required=""><br>
+							<select name="toval" size="11" id="" onchange="convertPressure()">
+								<option value="1">Pascal [Pa]</option>
+								<option value="2">Kilopascal [kPa]</option>
+								<option value="3" selected>Bar</option>
+								<option value="4">PSI [psi]</option>
+								<option value="5">KSI [ksi]</option>
+								<option value="6">Standard atmosphere [atm]</option>
+								<option value="7">Newton/square meter</option>
+								<option value="8">Pound-force/square inch [psi]</option>
+								<option value="9">Torr</option>
+								<option value="10">Millimeter of mercury [mmHg]</option>
+								<option value="11">Inches of mercury [inHg]</option>
+								<option value="12">Barad</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="speed" id="showspeed">
+						<div class="speedfrom">
+							<label for="unitfrom">From:</label><br>
+							<input type="number" placeholder="Enter value" required=""><br>
+							<select name="fromval" size="10" id="" onchange="convertSpeed()">
+								<option value="1" selected>Meters per second (m/s)</option>
+								<option value="2">Kilometers per hour (km/h)</option>
+								<option value="3">Miles per hour (mph)</option>
+								<option value="4">Revolutions per minute (RPM)</option>
+								<option value="5">Feet per second (ft/s)</option>
+								<option value="6">Knots (nautical miles per hour)</option>
+								<option value="7">Mach (speed of sound)</option>
+								<option value="8">Mach number (Ma)</option>
+								<option value="9">Hertz (Hz)</option>
+								<option value="10">Meters per minute (m/min)</option>
+							</select>
+						</div>
+						<hr color="gray">
+						<div class="speedto">
+							<label for="unitto">To:</label><br>
+							<input type="number" placeholder="Converted value" readonly required=""><br>
+							<select name="toval" size="10" id="" onchange="convertSpeed()">
+								<option value="1">Meters per second (m/s)</option>
+								<option value="2" selected>Kilometers per hour (km/h)</option>
+								<option value="3">Miles per hour (mph)</option>
+								<option value="4">Revolutions per minute (RPM)</option>
+								<option value="5">Feet per second (ft/s)</option>
+								<option value="6">Knots (nautical miles per hour)</option>
+								<option value="7">Mach (speed of sound)</option>
+								<option value="8">Mach number (Ma)</option>
+								<option value="9">Hertz (Hz)</option>
+								<option value="10">Meters per minute (m/min)</option>
+							</select>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch and Timer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="menu">
+      <ul class="ul">
+        <li id="timer" class="select active">Timer</li>
+        <li id="stopwatch" class="select">Stopwatch</li>
+      </ul>
+    </div>
+    <div class="timer-stopwatch">
+
+      <div class="timer">
+        <div class="time-input">
+          <label for>Set time : </label>
+          <input id="timer-hours" placeholder="Hours" type="number" min="0" max="99"><span>:</span>
+          <input id="timer-minutes" placeholder="Minutes" type="number" min="0" max="59"><span>:</span>
+          <input id="timer-seconds" placeholder="Seconds" type="number" min="0" max="59">
+        </div>
+        <div class="timer-display">
+          <div class="time-left">00:00:00</div>
+        </div>
+        <div class="timer-controls">
+          <button id="timer-restart"><i style="font-size:2rem" class="fa">&#xf021;</i></button>
+          <button id="timer-start"><i style="font-size:2rem" class="fa">&#xf04b;</i></button>
+          <button id="timer-pause"><i style="font-size:2rem" class="fa">&#xf04c;</i></button>
+        </div>
+      </div>
+
+      <div class="stopwatch">
+        <div class="main_content">
+          <div class="circle">
+            <div class="stopwatch-display">
+              <div class="time">00:00:00</div>
+            </div>
+          </div>
+          <div class="stopwatch-controls">
+            <button id="stopwatch-restart"><i style="font-size:2rem" class="fa">&#xf021;</i></button>
+            <button id="stopwatch-start"><i style="font-size:2rem" class="fa">&#xf04b;</i></button>
+            <button id="stopwatch-pause"><i style="font-size:2rem" class="fa">&#xf04c;</i></button>
+            <button id="stopwatch-laps"><i style="font-size:2rem" class="fa">&#xf024;</i></button>
+          </div>
+        </div>
+        <div class="laps"></div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>+
